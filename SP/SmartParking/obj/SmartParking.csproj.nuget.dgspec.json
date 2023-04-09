@@ -1,28 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Luis\\Documents\\1-A-WSU\\A1class\\cpts322\\SP\\SmartParking\\SmartParking.csproj": {}
+    "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\SmartParking.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Luis\\Documents\\1-A-WSU\\A1class\\cpts322\\SP\\SmartParking\\SmartParking.csproj": {
+    "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\SmartParking.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luis\\Documents\\1-A-WSU\\A1class\\cpts322\\SP\\SmartParking\\SmartParking.csproj",
+        "projectUniqueName": "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\SmartParking.csproj",
         "projectName": "SmartParking",
-        "projectPath": "C:\\Users\\Luis\\Documents\\1-A-WSU\\A1class\\cpts322\\SP\\SmartParking\\SmartParking.csproj",
-        "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luis\\Documents\\1-A-WSU\\A1class\\cpts322\\SP\\SmartParking\\obj\\",
+        "projectPath": "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\SmartParking.csproj",
+        "packagesPath": "C:\\Users\\allister18\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\allister18\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net472"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
