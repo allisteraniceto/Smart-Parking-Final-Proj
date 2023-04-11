@@ -1,7 +1,12 @@
 ﻿namespace TeamVaxxers
 {
 
-
+    public class Admin
+    {
+        public string username { get; set; }
+        public string password { get; set; }
+    }
+  
     public class Beacon
     {
         public double D1 { get; set; }
