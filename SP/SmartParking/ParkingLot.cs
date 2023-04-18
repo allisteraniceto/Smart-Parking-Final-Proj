@@ -62,9 +62,10 @@ namespace TeamVaxxers
         }
         private async void getBeaconDataAsync() // grabs population from database 
         {
-            
-    
+
+
             //******************** Get initial list of beacons ***********************//
+            //Console.WriteLine("INITIAL TESTS\n");
             var BeaconsSet = await client
                .Child("Beacons/")//Prospect list
                .OnceSingleAsync<Beacons>();
@@ -79,7 +80,7 @@ namespace TeamVaxxers
         private void onChildChanged() // Waits for data base to start with variable
         {
 
-
+            Console.WriteLine("Updated Beacon Data"); //Console.Writeline() had \n at end by default
             var child = client.Child("Beacons/data");
             var observable = child.AsObservable<Beacon>();
             var subscription = observable
@@ -105,9 +106,11 @@ namespace TeamVaxxers
 
         private void displayBeaconsData(Beacons beacons) // display beacons
         {
+            var i = 1;
             foreach (var beacon in beacons.data)
             {
-                Console.WriteLine($"beacon id: { beacon.Id} [{ beacon.D1}]");
+                Console.WriteLine($"beacon id #{i}: { beacon.Id} [{ beacon.D1}]");
+                i++;
             }
 
         }

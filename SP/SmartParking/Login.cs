@@ -15,7 +15,9 @@ namespace TeamVaxxers
 
         private void loginBtn_Click_1(object sender, EventArgs e)
         {
-            User user = new User();
+            User user = new User(); //enter username here
+            //set values of username and password to user object here
+
             if (user.UserName == usernameBox.Text && user.Password == passwordBox.Text)
             {
                 this.Hide();
