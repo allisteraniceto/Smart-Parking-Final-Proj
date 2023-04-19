@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\SmartParking.csproj": {}
+    "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\SP\\SmartParking\\SmartParking.csproj": {}
   },
   "projects": {
-    "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\SmartParking.csproj": {
+    "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\SP\\SmartParking\\SmartParking.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\SmartParking.csproj",
+        "projectUniqueName": "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\SP\\SmartParking\\SmartParking.csproj",
         "projectName": "SmartParking",
-        "projectPath": "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\SmartParking.csproj",
-        "packagesPath": "C:\\Users\\allister18\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\obj\\",
+        "projectPath": "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\SP\\SmartParking\\SmartParking.csproj",
+        "packagesPath": "C:\\Users\\lez18\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\SP\\SmartParking\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\allister18\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lez18\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,10 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "FirebaseDatabase.net": {
               "target": "Package",
               "version": "[4.0.7, )"
