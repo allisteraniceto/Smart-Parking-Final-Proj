@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\SP\\SmartParking\\SmartParking.csproj": {}
+    "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\SmartParking.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\SP\\SmartParking\\SmartParking.csproj": {
+    "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\SmartParking.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\SP\\SmartParking\\SmartParking.csproj",
+        "projectUniqueName": "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\SmartParking.csproj",
         "projectName": "SmartParking",
-        "projectPath": "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\SP\\SmartParking\\SmartParking.csproj",
+        "projectPath": "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\SmartParking.csproj",
         "packagesPath": "C:\\Users\\lez18\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\SP\\SmartParking\\obj\\",
+        "outputPath": "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [

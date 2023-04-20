@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1VmW6xLSHxo+vJ8dWJScANJoyXGKgboHk3XMAbyUOZ4KO4e+UfMHhyaUqJ1XlZYz1bbzeB33/4+Z+vz0lZ4IkA==",
+  "dgSpecHash": "/b/p1Cne8RuuoDiU1zLF1ApfOwDf0fQJpqnwUFi9s8GgaAo77A2EVrooperakvHBXkfEJSOnNunfJ948PkKnZg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\SP\\SmartParking\\SmartParking.csproj",
+  "projectFilePath": "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\SmartParking.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lez18\\.nuget\\packages\\firebaseadmin\\2.3.0\\firebaseadmin.2.3.0.nupkg.sha512",
     "C:\\Users\\lez18\\.nuget\\packages\\firebasedatabase.net\\4.0.7\\firebasedatabase.net.4.0.7.nupkg.sha512",

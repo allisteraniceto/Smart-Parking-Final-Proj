@@ -15,10 +15,12 @@ namespace TeamVaxxers
 
         private void loginBtn_Click_1(object sender, EventArgs e)
         {
-            User user = new User(); //enter username here
+            Admin user = new Admin(); //enter username here
+            //read fron a file the username and passwor
+            //loaddata(user);
             //set values of username and password to user object here
 
-            if (user.UserName == usernameBox.Text && user.Password == passwordBox.Text)
+            if (user.username == usernameBox.Text && user.password == passwordBox.Text)
             {
                 this.Hide();
                 ParkingLot engine = new ParkingLot();

@@ -3,8 +3,8 @@
 
     public class Admin
     {
-        public string username { get; set; }
-        public string password { get; set; }
+        public string username = ""; //{ get; set; }
+        public string password = ""; //{ get; set; }
     }
   
     public class Beacon
@@ -19,8 +19,10 @@
     }
     public class Beacons
     {
-        public int Total { get; set; }
+        public int total { get; set; }
         public Beacon[] data { get; set; }
+
+
 
     }
     
@@ -33,7 +35,7 @@
     //class parking lot that has total
     public class ParkingMap
     {
-        public int Total { get; set; }
+        public int total { get; set; }
         public Slot[] data { get; set; } //array of Slots
     }
 
@@ -50,20 +52,9 @@
     public class Sensors
     {
         public Sensor data { get; set; } //array of sensors
-        public Sensor total { get; set; } 
+        public int total { get; set; } 
     }
 
-    public class Response
-
-    {
-        public bool success { get; set; }
-        public int index { get; set; }
-        public string message { get; set; }
-        public string received { get; set; }
-        public string companyId { get; set; }
-        public string color { get; set; }
-        public int[] infected { get; set; }
-
-    }
+    
 }
 
