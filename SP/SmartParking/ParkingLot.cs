@@ -15,6 +15,8 @@ using System.Reactive.Linq;
 using System.Threading;
 using System.Windows.Forms;
 
+using System.IO; //for SteamReader
+
 namespace TeamVaxxers
 {
     public partial class ParkingLot : Form
@@ -150,6 +152,16 @@ namespace TeamVaxxers
                 Console.WriteLine($"beacon id #{i}: { beacon.Id} [{ beacon.D1}]");
                 i++;
             }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Add User Clicked");
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }

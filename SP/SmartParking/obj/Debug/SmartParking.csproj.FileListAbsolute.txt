@@ -158,3 +158,22 @@ C:\Users\lez18\OneDrive\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParki
 C:\Users\lez18\OneDrive\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\obj\Debug\SmartParking.csproj.CopyComplete
 C:\Users\lez18\OneDrive\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\obj\Debug\TeamVaxxers.exe
 C:\Users\lez18\OneDrive\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\obj\Debug\TeamVaxxers.pdb
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\FirebaseAdmin.dll
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\Google.Api.Gax.dll
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\Google.Api.Gax.pdb
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\Google.Api.Gax.Rest.dll
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\Google.Api.Gax.Rest.pdb
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\Google.Apis.dll
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\Google.Apis.pdb
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\Google.Apis.Auth.dll
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\Google.Apis.Core.dll
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\Google.Apis.Core.pdb
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\System.Buffers.dll
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\System.Collections.Immutable.dll
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\System.Memory.dll
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\obj\Debug\TeamVaxxers.exe.config
