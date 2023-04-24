@@ -73,13 +73,22 @@ namespace SmartParking
 
 
             //Update parking space rectangle color
-            G.FillRectangle(myBrush2, rect[2]);
-            G.FillRectangle(myBrush2, rect[5]);
+            //G.FillRectangle(myBrush2, rect[2]);
+            //G.FillRectangle(myBrush2, rect[5]);
 
-            foreach (var rectangle in rect)
+            int rectangleParked = -1; //will store rectangle to fill color in
+            if (BeaconsSet.data[0] != null)
             {
-
+                foreach (var beacon in BeaconsSet.data)
+                {
+                    rectangleParked = slotParked(beacon.D1, beacon.D2, beacon.D3, beacon.D4);
+                    if (rectangleParked != -1)
+                    {
+                        G.FillRectangle(myBrush2, rect[rectangleParked]);
+                    }
+                }
             }
+
 
 
 
@@ -193,11 +202,34 @@ namespace SmartParking
             var i = 1;
             foreach (var beacon in beacons.data)
             {
-                Console.WriteLine($"beacon id #{i}: { beacon.Id} [{ beacon.D1}]");
+                Console.WriteLine($"beacon id #{i}: { beacon.Id} d1={ beacon.D1} d2={ beacon.D2} d3={ beacon.D3} d4={ beacon.D4}");
                 i++;
             }
 
         }
+
+        //private double[] trilateration(double d1, double d2, double d3, double d4)
+        //{
+        //    // Calculate the coefficients of the linear system of equations
+        //    double A1 = 2 * (SensorSet.data[1].position.x - SensorSet.data[0].position.x);
+        //    double B1 = 2 * (SensorSet.data[1].position.y - SensorSet.data[0].position.y);
+        //    double C1 = Math.Pow(d1, 2) - Math.Pow(d2, 2) - Math.Pow(SensorSet.data[0].position.x, 2) + Math.Pow(SensorSet.data[1].position.x, 2) - Math.Pow(SensorSet.data[0].position.y, 2) + Math.Pow(SensorSet.data[1].position.y, 2);
+        //    double A2 = 2 * (SensorSet.data[2].position.x - SensorSet.data[0].position.x);
+        //    double B2 = 2 * (SensorSet.data[2].position.y - SensorSet.data[0].position.y);
+        //    double C2 = Math.Pow(d1, 2) - Math.Pow(d3, 2) - Math.Pow(SensorSet.data[0].position.x, 2) + Math.Pow(SensorSet.data[2].position.x, 2) - Math.Pow(SensorSet.data[0].position.y, 2) + Math.Pow(SensorSet.data[2].position.y, 2);
+        //    double A3 = 2 * (SensorSet.data[3].position.x - SensorSet.data[0].position.x);
+        //    double B3 = 2 * (SensorSet.data[3].position.y - SensorSet.data[0].position.y);
+        //    double C3 = Math.Pow(d1, 2) - Math.Pow(d4, 2) - Math.Pow(SensorSet.data[0].position.x, 2) + Math.Pow(SensorSet.data[3].position.x, 2) - Math.Pow(SensorSet.data[0].position.y, 2) + Math.Pow(SensorSet.data[3].position.y, 2);
+
+        //    // Solve the linear system of equations using Cramer's rule
+        //    double det = A1 * B2 * B3 + B1 * A3 * B2 + A2 * B1 * B3 - A3 * B2 * B1 - B3 * A2 * B1 - B2 * A1 * B3;
+        //    double x = (C1 * B2 * B3 + B1 * C3 * B2 + C2 * B1 * B3 - C3 * B2 * B1 - B3 * C2 * B1 - B2 * C1 * B3) / det;
+        //    double y = (A1 * C2 * B3 + C1 * A3 * B2 + A2 * B1 * C3 - A3 * B2 * C1 - B3 * A2 * C1 - B1 * A3 * C2) / det;
+
+        //    // Return the result as a 2D point
+        //    double[] result = { x, y };
+        //    return result;
+        //}
 
         private double[] trilateration(double d1, double d2, double d3, double d4)
         {
@@ -219,10 +251,41 @@ namespace SmartParking
 
             // Return the result as a 2D point
             double[] result = { x, y };
+
             return result;
         }
 
 
+        private int slotParked(double d1, double d2, double d3, double d4)
+        {
+            double[] point = new double[2]; //point[0] = x, point[1] = y
+            point = trilateration(d1, d2, d3, d4);
+            if (0 < point[0] && point[0] > 36 && 0 < point[0] && point[1] < 48) //point x and y: 0 < x < 36 && 0 < y < 48
+            {
+                return 0; //rectangle 1 and so on...
+            }
+            else if (36 < point[0] && point[0] > 72 && 0 < point[0] && point[1] < 48)
+            {
+                return 1;
+            }
+            else if (72 < point[0] && point[0] > 108 && 0 < point[0] && point[1] < 48)
+            {
+                return 2;
+            }
+            else if (0 < point[0] && point[0] > 36 && 60 < point[0] && point[1] < 108)
+            {
+                return 3;
+            }
+            else if (36 < point[0] && point[0] > 72 && 60 < point[0] && point[1] < 108)
+            {
+                return 4;
+            }
+            else if (72 < point[0] && point[0] > 108 && 60 < point[0] && point[1] < 108)
+            {
+                return 5;
+            }
+            return -1;
+        }
 
         //even handlers
 
