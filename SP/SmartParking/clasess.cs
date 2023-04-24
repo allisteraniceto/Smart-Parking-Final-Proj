@@ -1,10 +1,15 @@
-﻿namespace TeamVaxxers
+﻿namespace SmartParking
 {
 
     public class Admin
     {
-        public string username = ""; //{ get; set; }
-        public string password = ""; //{ get; set; }
+        public string username { get; set; } = "";
+        public string password { get; set; } = "";
+
+        public void addCar()
+        {
+
+        }
     }
   
     public class Beacon
@@ -22,10 +27,14 @@
         public int total { get; set; }
         public Beacon[] data { get; set; }
 
-
-
     }
-    
+
+
+    public class Point //coordinatess
+    {
+        public int x { get; set; }
+        public int y { get; set; }
+    }
 
     public class Slot //for easch parking slot
     {
@@ -40,18 +49,14 @@
     }
 
 
-    public class Point //coordinatess
-    {
-        public int x { get; set; }
-        public int y { get; set; }
-    }
+
     public class Sensor
-    { //have to put [] after class because it is a property (c# syntax)
-        public Point[] position { get; set; } //array of Points (4 points)
+    { 
+        public Point position { get; set; } //sensor just has one point
     }
     public class Sensors
     {
-        public Sensor data { get; set; } //array of sensors
+        public Sensor[] data { get; set; } //array of sensors
         public int total { get; set; } 
     }
 

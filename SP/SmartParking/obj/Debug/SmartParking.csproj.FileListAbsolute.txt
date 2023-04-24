@@ -72,8 +72,6 @@ C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Pa
 C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\obj\Debug\SmartParking.csproj.AssemblyReference.cache
-C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\obj\Debug\TeamVaxxers.ParkingLot.resources
-C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\obj\Debug\TeamVaxxers.Login.resources
 C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\obj\Debug\TeamVaxxers.Properties.Resources.resources
 C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\obj\Debug\SmartParking.csproj.GenerateResource.cache
 C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\obj\Debug\SmartParking.csproj.CoreCompileInputs.cache
@@ -177,3 +175,5 @@ C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Pa
 C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\System.Memory.dll
 C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\obj\Debug\TeamVaxxers.exe.config
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\obj\Debug\SmartParking.ParkingLot.resources
+C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\obj\Debug\SmartParking.Login.resources

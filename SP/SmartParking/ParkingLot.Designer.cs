@@ -1,4 +1,4 @@
-﻿namespace TeamVaxxers
+﻿namespace SmartParking
 {
     partial class ParkingLot
     {

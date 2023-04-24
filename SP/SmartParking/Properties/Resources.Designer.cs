@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TeamVaxxers.Properties
+namespace SmartParking.Properties
 {
 
 
