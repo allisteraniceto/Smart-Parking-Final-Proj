@@ -20,7 +20,8 @@ namespace SmartParking
 
         private void getCredentials(Admin admin_user) //PATH: "C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\user.txt"
         { //use: \ for escape char
-            string path = "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\user.txt";
+            //string path = "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\user.txt";
+            string path = "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\user.txt";
             //string currentDirectory = Environment.CurrentDirectory;
             //string filePath = Path.Combine(currentDirectory, "user.txt");
 

@@ -88,6 +88,7 @@ namespace SmartParking
                     if (rectangleParked != -1)
                     {
                         G.FillRectangle(myBrush2, rect[rectangleParked]);
+                        G.DrawRectangle(blackPen, rect[rectangleParked]);
                     }
                 }
             }
@@ -325,14 +326,82 @@ namespace SmartParking
 
         //even handlers
 
-        private void button2_Click(object sender, EventArgs e)
+        private void addCarButton_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Add User Clicked");
+            int rectNum = -1;
+            int l = 0;
+            SolidBrush myBrush2 = new SolidBrush(Color.Brown);
+            Pen blackPen = new Pen(Color.Black, 0);
+
+            rectNum = int.Parse(carTextBox.Text);
+            rectNum -= 1; //decrement rectnum to get correct slot
+
+            Console.WriteLine($"Number: {rectNum}");
+
+            if (rectNum !=-1)
+            {
+                G.FillRectangle(myBrush2, rect[rectNum]);
+                G.DrawRectangle(blackPen, rect[rectNum]);
+            }
+
+            //draw parking numbers
+            for (int i = 0; i < 3; i++)
+            {
+                DrawStringFloatFormat((i + 1).ToString(), 100 + 100 * i + 50, 200.0F);
+            }
+            for (int j = 3; j < 6; j++)
+            {
+                DrawStringFloatFormat((j + 1).ToString(), 100 + 100 * l + 50, 450.0F);
+                l++;
+            }
+
+            Console.WriteLine("Add Car Clicked");
+        }
+        private void removeCarButton_Click_1(object sender, EventArgs e)
+        {
+            int rectNum = -1;
+            int l = 0;
+            SolidBrush myBrush = new SolidBrush(Color.Beige);
+            Pen blackPen = new Pen(Color.Black, 0);
+
+            rectNum = int.Parse(carTextBox.Text);
+            rectNum -= 1; //decrement rectnum to get correct slot
+
+            Console.WriteLine($"Number: {rectNum}");
+
+            if (rectNum != -1)
+            {
+                G.FillRectangle(myBrush, rect[rectNum]);
+                G.DrawRectangle(blackPen, rect[rectNum]);
+            }
+
+            //draw parking numbers
+            for (int i = 0; i < 3; i++)
+            {
+                DrawStringFloatFormat((i + 1).ToString(), 100 + 100 * i + 50, 200.0F);
+            }
+            for (int j = 3; j < 6; j++)
+            {
+                DrawStringFloatFormat((j + 1).ToString(), 100 + 100 * l + 50, 450.0F);
+                l++;
+            }
+            Console.WriteLine("Remove Car clicked");
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void carsBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
