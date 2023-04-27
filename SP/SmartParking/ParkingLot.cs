@@ -79,12 +79,16 @@ namespace SmartParking
             //G.FillRectangle(myBrush2, rect[5]);
 
             int rectangleParked = -1; //will store rectangle to fill color in
-            if (BeaconsSet.data[0] != null)
+            if (BeaconsSet == null)
+            {
+                Console.WriteLine("Beacons Object Not Initialized...");
+            }
+            else
             {
                 foreach (var beacon in BeaconsSet.data)
                 {
                     //rectangleParked = slotParked(beacon.D1, beacon.D2, beacon.D3, beacon.D4);
-                    rectangleParked = slotParked(23.0, 69, 2.0, 1.0);
+                    rectangleParked = slotParked(beacon.D1, beacon.D2, beacon.D3, beacon.D4);
                     if (rectangleParked != -1)
                     {
                         G.FillRectangle(myBrush2, rect[rectangleParked]);
@@ -333,12 +337,21 @@ namespace SmartParking
             SolidBrush myBrush2 = new SolidBrush(Color.Brown);
             Pen blackPen = new Pen(Color.Black, 0);
 
-            rectNum = int.Parse(carTextBox.Text);
-            rectNum -= 1; //decrement rectnum to get correct slot
+            bool isValidInput = int.TryParse(carTextBox.Text, out rectNum); //validate int input
 
-            Console.WriteLine($"Number: {rectNum}");
+            if (isValidInput)
+            {
+                rectNum -= 1; //decrement rectnum to get correct slot
+            }
+            else
+            {
+                Console.WriteLine($"INVALID INPUT: {carTextBox.Text}");
+                return;
+            }
 
-            if (rectNum !=-1)
+            Console.WriteLine($"Slot Number: {rectNum + 1}");
+
+            if (0 <= rectNum && rectNum <= 6)
             {
                 G.FillRectangle(myBrush2, rect[rectNum]);
                 G.DrawRectangle(blackPen, rect[rectNum]);
@@ -364,12 +377,21 @@ namespace SmartParking
             SolidBrush myBrush = new SolidBrush(Color.Beige);
             Pen blackPen = new Pen(Color.Black, 0);
 
-            rectNum = int.Parse(carTextBox.Text);
-            rectNum -= 1; //decrement rectnum to get correct slot
+            bool isValidInput = int.TryParse(carTextBox.Text, out rectNum); //validate int input
 
-            Console.WriteLine($"Number: {rectNum}");
+            if (isValidInput)
+            {
+                rectNum -= 1; //decrement rectnum to get correct slot
+                Console.WriteLine($"Slot Number: {rectNum + 1}");
+            }
+            else
+            {
+                Console.WriteLine($"INVALID INPUT: {carTextBox.Text}");
+                return;
+            }
 
-            if (rectNum != -1)
+
+            if (0 <= rectNum && rectNum <= 6)
             {
                 G.FillRectangle(myBrush, rect[rectNum]);
                 G.DrawRectangle(blackPen, rect[rectNum]);
@@ -402,6 +424,34 @@ namespace SmartParking
 
         }
 
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_3(object sender, EventArgs e)
+        {
+
+        }
     }
 }
