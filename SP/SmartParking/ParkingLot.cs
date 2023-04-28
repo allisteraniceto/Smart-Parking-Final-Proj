@@ -439,10 +439,7 @@ namespace SmartParking
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void label1_Click_2(object sender, EventArgs e)
         {
@@ -451,6 +448,60 @@ namespace SmartParking
 
         private void label1_Click_3(object sender, EventArgs e)
         {
+
+        }
+
+        private void userTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passwordTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void addUser_Click(object sender, EventArgs e)
+        {
+            addUserFile(userTextBox.Text, passwordTextBox.Text);
+        }
+        private void removeUserButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addUserFile(string username, string password)
+        {
+            string path = "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\user.txt";
+            //string path = "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\user.txt";
+            try
+            {
+                bool isEmpty = new FileInfo(path).Length == 0; //empty or not
+                if (isEmpty)
+                {
+                    using (StreamWriter writer = new StreamWriter(path, true)) //set append parameter to true
+                    {
+                        writer.WriteLine(username);
+                        writer.WriteLine(password);
+                        Console.WriteLine("Username and Password written to a new text file...");
+                    }
+                }
+                else
+                {
+                    using (StreamWriter writer = new StreamWriter(path, true)) //set append parameter to true
+                    {
+                        writer.WriteLine(username);
+                        writer.WriteLine(password);
+                        Console.WriteLine("Username and Password appended to text file...");
+                    }
+                }
+
+            }
+            catch(IOException e)
+            {
+                Console.WriteLine("An error occurred while reading the file: " + e.Message);
+                userTextBox.Text = passwordTextBox.Text = "";
+            }
+            userTextBox.Text = passwordTextBox.Text = ""; //reset textbox fields
 
         }
     }

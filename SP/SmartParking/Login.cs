@@ -22,8 +22,7 @@ namespace SmartParking
         { //use: \ for escape char
             string path = "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\user.txt";
             //string path = "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\user.txt";
-            //string currentDirectory = Environment.CurrentDirectory;
-            //string filePath = Path.Combine(currentDirectory, "user.txt");
+
 
             try
             {
@@ -31,10 +30,13 @@ namespace SmartParking
                 using (StreamReader reader = new StreamReader(path)) //using: ensures object is disposed of when the block is exited
                 {
                     string line1, line2;
-                    while((line1 = reader.ReadLine()) != null && (line2 = reader.ReadLine()) != null) //read 2 lines at a time
+                    while ((line1 = reader.ReadLine()) != null && (line2 = reader.ReadLine()) != null) //read 2 lines at a time
                     {
-                        admin_user.username = line1;
-                        admin_user.password = line2;
+                        if (line1 == usernameBox.Text && line2 == passwordBox.Text) //if user input matches admin
+                        {
+                            admin_user.username = line1;
+                            admin_user.password = line2;
+                        }
                     }
                 }
             }
