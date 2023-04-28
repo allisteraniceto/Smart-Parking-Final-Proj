@@ -29,19 +29,37 @@ namespace SmartParking
         Beacons BeaconsSet;
         ParkingMap ParkingMapSet;
         Sensors SensorSet;
+        string path = "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\user.txt";
+        //string path = "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\user.txt";
 
+        //DEFAULT CONSTRUCTOR
         public ParkingLot()
         {
             InitializeComponent();
+            removeUserFile("user"); //remove default user
            // WindowState = FormWindowState.Maximized;
         }
+
+
+        //DRAW PARKING LOT
+
+
         private void ParkingLot_Load(object sender, EventArgs e)
         {
             G = this.CreateGraphics();
         }
-        private void loadData(object sender, EventArgs e)
+        public void DrawStringFloatFormat(String drawString, float x, float y)
         {
-            getBeaconDataAsync();
+            // Create font and brush.
+            Font drawFont = new Font("Arial", 16);
+            SolidBrush drawBrush = new SolidBrush(Color.Black);          
+
+            // Set format of string.
+            StringFormat drawFormat = new StringFormat();
+           // drawFormat.FormatFlags = StringFormatFlags.DirectionVertical;
+
+            // Draw string to screen.
+            G.DrawString(drawString, drawFont, drawBrush, x, y, drawFormat);
         }
         private void DrawSlots(object sender, EventArgs e)
         {
@@ -104,7 +122,7 @@ namespace SmartParking
             //draw parking numbers
             for (int i = 0; i < 3; i++)
             {
-                 DrawStringFloatFormat((i + 1).ToString(), 100 + 100 * i + 50, 200.0F);
+                DrawStringFloatFormat((i + 1).ToString(), 100 + 100 * i + 50, 200.0F);
             }
             for (int j = 3; j < 6; j++)
             {
@@ -113,6 +131,16 @@ namespace SmartParking
             }
 
             Console.WriteLine("Drawing Complete");
+        }
+
+
+
+        //FIREBASE DATA RETRIEVAL
+
+
+        private void loadData(object sender, EventArgs e)
+        {
+            getBeaconDataAsync();
         }
         private async void getBeaconDataAsync() // grabs population from database 
         {
@@ -151,7 +179,7 @@ namespace SmartParking
                 i++;
             }
 
-            foreach(var sensor in SensorSet.data)
+            foreach (var sensor in SensorSet.data)
             {
                 Console.WriteLine($"sensor #{j} x={sensor.position.x} y={sensor.position.y}");
                 j++;
@@ -163,7 +191,6 @@ namespace SmartParking
 
 
         }
-
         private void onChildChanged() // Waits for data base to start with variable
         {
             //THIS FUNCTION DOES NOT STORE BEACON DATA, JUST PRINTS OUT ID AND D1 WHEN DATA IS UPDATED
@@ -175,7 +202,7 @@ namespace SmartParking
                 {
                     //use beacon id to track
                     Console.WriteLine($"beacon id: { x.Object.Id} [{ x.Object.D1}]");
-                    
+
                     foreach (var data in BeaconsSet.data) //iterator
                     {
                         if (data.Id == x.Object.Id) //if id matches id of beacon that was changed
@@ -189,21 +216,12 @@ namespace SmartParking
 
                     //trilateration(x.Object.D1, x.Object.D2, x.Object.D3, x.Object.D4);
                 });
-           
-        }
-        public void DrawStringFloatFormat(String drawString, float x, float y)
-        {
-            // Create font and brush.
-            Font drawFont = new Font("Arial", 16);
-            SolidBrush drawBrush = new SolidBrush(Color.Black);          
 
-            // Set format of string.
-            StringFormat drawFormat = new StringFormat();
-           // drawFormat.FormatFlags = StringFormatFlags.DirectionVertical;
-
-            // Draw string to screen.
-            G.DrawString(drawString, drawFont, drawBrush, x, y, drawFormat);
         }
+
+
+        //CALCULATIONS
+
 
         private void displayBeaconsData(Beacons beacons) // display beacons
         {
@@ -291,10 +309,7 @@ namespace SmartParking
             double[] result = { x, y };
             return result;
         }
-
-
-        
-        private int slotParked(double d1, double d2, double d3, double d4)
+        private int slotParked(double d1, double d2, double d3, double d4) //function to figure out which slot is occupied
         {
             double[] point = new double[2]; //point[0] = x, point[1] = y
             point = trilateration(d2, d3, d4);
@@ -327,8 +342,10 @@ namespace SmartParking
             }
             return -1;
         }
+        
 
-        //even handlers
+        //EVENT HANDLERS
+
 
         private void addCarButton_Click(object sender, EventArgs e)
         {
@@ -409,43 +426,23 @@ namespace SmartParking
             }
             Console.WriteLine("Remove Car clicked");
         }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void carsBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
-
-
-
         private void label1_Click_2(object sender, EventArgs e)
         {
 
         }
-
         private void label1_Click_3(object sender, EventArgs e)
         {
 
@@ -455,24 +452,30 @@ namespace SmartParking
         {
 
         }
-
         private void passwordTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
         private void addUser_Click(object sender, EventArgs e)
         {
+            if (userTextBox.Text == "" && passwordTextBox.Text == "") //if empty, done add users
+            {
+                return;
+            }
             addUserFile(userTextBox.Text, passwordTextBox.Text);
         }
         private void removeUserButton_Click(object sender, EventArgs e)
         {
-
+            removeUserFile(userTextBox.Text);
         }
+
+
+        //TEXT FILE MANIPULATION
+
 
         private void addUserFile(string username, string password)
         {
-            string path = "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\user.txt";
-            //string path = "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\user.txt";
+
             try
             {
                 bool isEmpty = new FileInfo(path).Length == 0; //empty or not
@@ -502,6 +505,34 @@ namespace SmartParking
                 userTextBox.Text = passwordTextBox.Text = "";
             }
             userTextBox.Text = passwordTextBox.Text = ""; //reset textbox fields
+
+        }
+        private void removeUserFile(string username) //just need username to remove user
+        {
+            //Read all lines and set to string array
+            string[] lines = File.ReadAllLines(path);
+
+            var modifiedLines = new List<string>(); //list to add lines witout username and password
+
+            for (int i = 0; i < lines.Length; i+=2) //skip 2 lines beceause of text file format
+            {
+                if(lines[i] != username) //if username and password are not to be deleted, add to new list
+                {
+                    modifiedLines.Add(lines[i]);
+                    modifiedLines.Add(lines[i + 1]);
+                }
+                else
+                {
+                    Console.WriteLine($"user deleted: {username}");
+                }
+            }
+
+            if(lines.Length == modifiedLines.Count)
+            {
+                Console.WriteLine("No users removed..");
+            }
+
+            File.WriteAllLines(path, modifiedLines);
 
         }
     }

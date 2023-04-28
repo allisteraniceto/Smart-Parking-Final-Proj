@@ -6,26 +6,47 @@ namespace SmartParking
 {
     public partial class Login : Form
     {
+        string path = "";
+
         public Login()
         {
             InitializeComponent();
+            Console.WriteLine($"{Environment.CurrentDirectory}"); //current working directory inside SmartParking\bin\Debug
+            path = Path.Combine(Environment.CurrentDirectory, "user.txt");
         }
-        //public Login(string username, string password) //overloaded default constructor
-        //{
-        //    InitializeComponent();
-        //    this.username = username;
-        //    this.password = password;
-        //}
 
+        private void getWorkingDirectory()
+        {
+            //currently at SmartParking\bin\Debug, go up 2 directories to get to SmartParking
+            string currentDirectory = Environment.CurrentDirectory;
+        }
 
         private void getCredentials(Admin admin_user) //PATH: "C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\user.txt"
         { //use: \ for escape char
-            string path = "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\user.txt";
-            //string path = "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\user.txt";
-
+            //path = "C:\\Users\\allister18\\OneDrive - Columbia Basin College\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\user.txt";
+            //path = "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\user.txt";
 
             try
             {
+                if (!File.Exists(path)) //if file does not exist, create a new file
+                {
+                    
+                    using (StreamWriter writer = new StreamWriter(path))
+                    {
+                        writer.WriteLine("new");
+                        writer.WriteLine("new");
+                    }
+                    label.Text = "new user: enter 'user' for password and username";
+                    return;
+                }
+
+
+                if (usernameBox.Text == "" || passwordBox.Text == "") //if either field is empty, fail login
+                {
+                    label.Text = "Please enter username AND password";
+                    return;
+                }
+
                 //create new StreamReader instance
                 using (StreamReader reader = new StreamReader(path)) //using: ensures object is disposed of when the block is exited
                 {
@@ -52,6 +73,8 @@ namespace SmartParking
             //read fron a file the username and passwor
             //loaddata(user);
             //set values of username and password to user object here
+
+
 
             getCredentials(user); //get username and password from text file
 
