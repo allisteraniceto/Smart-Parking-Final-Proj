@@ -33,10 +33,11 @@ namespace SmartParking
         //string path = "C:\\Users\\lez18\\OneDrive\\Documents\\CPTS322\\Smart-Parking-Final-Proj\\SP\\SmartParking\\user.txt";
 
         //DEFAULT CONSTRUCTOR
-        public ParkingLot()
+        public ParkingLot(string username)
         {
             InitializeComponent();
             removeUserFile("user"); //remove default user
+            welcomeUserLabel.Text = username;
            // WindowState = FormWindowState.Maximized;
         }
 
@@ -533,6 +534,11 @@ namespace SmartParking
             }
 
             File.WriteAllLines(path, modifiedLines);
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -42,6 +42,8 @@
             this.addCarButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.loadBtn = new System.Windows.Forms.Button();
+            this.welcomeUserLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             s = new System.Windows.Forms.Panel();
             s.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +52,8 @@
             // 
             s.Anchor = System.Windows.Forms.AnchorStyles.Right;
             s.BackColor = System.Drawing.Color.NavajoWhite;
+            s.Controls.Add(this.label1);
+            s.Controls.Add(this.welcomeUserLabel);
             s.Controls.Add(this.passwordLabel);
             s.Controls.Add(this.usernameLabel);
             s.Controls.Add(this.passwordTextBox);
@@ -72,7 +76,7 @@
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(45, 460);
+            this.passwordLabel.Location = new System.Drawing.Point(45, 521);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(68, 17);
             this.passwordLabel.TabIndex = 13;
@@ -82,7 +86,7 @@
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Location = new System.Drawing.Point(45, 415);
+            this.usernameLabel.Location = new System.Drawing.Point(45, 476);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(71, 17);
             this.usernameLabel.TabIndex = 12;
@@ -91,7 +95,7 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(42, 480);
+            this.passwordTextBox.Location = new System.Drawing.Point(42, 541);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(220, 22);
             this.passwordTextBox.TabIndex = 11;
@@ -100,7 +104,7 @@
             // removeUserButton
             // 
             this.removeUserButton.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.removeUserButton.Location = new System.Drawing.Point(159, 522);
+            this.removeUserButton.Location = new System.Drawing.Point(157, 582);
             this.removeUserButton.Name = "removeUserButton";
             this.removeUserButton.Size = new System.Drawing.Size(103, 32);
             this.removeUserButton.TabIndex = 10;
@@ -111,7 +115,7 @@
             // addUserButton
             // 
             this.addUserButton.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.addUserButton.Location = new System.Drawing.Point(42, 522);
+            this.addUserButton.Location = new System.Drawing.Point(48, 582);
             this.addUserButton.Name = "addUserButton";
             this.addUserButton.Size = new System.Drawing.Size(103, 32);
             this.addUserButton.TabIndex = 9;
@@ -121,7 +125,7 @@
             // 
             // userTextBox
             // 
-            this.userTextBox.Location = new System.Drawing.Point(42, 435);
+            this.userTextBox.Location = new System.Drawing.Point(42, 496);
             this.userTextBox.Name = "userTextBox";
             this.userTextBox.Size = new System.Drawing.Size(220, 22);
             this.userTextBox.TabIndex = 8;
@@ -131,7 +135,7 @@
             // 
             this.userLabel.AutoSize = true;
             this.userLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.userLabel.Location = new System.Drawing.Point(79, 377);
+            this.userLabel.Location = new System.Drawing.Point(82, 444);
             this.userLabel.Name = "userLabel";
             this.userLabel.Size = new System.Drawing.Size(145, 20);
             this.userLabel.TabIndex = 7;
@@ -141,7 +145,7 @@
             // 
             this.carLabel.AutoSize = true;
             this.carLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.carLabel.Location = new System.Drawing.Point(88, 135);
+            this.carLabel.Location = new System.Drawing.Point(82, 260);
             this.carLabel.Name = "carLabel";
             this.carLabel.Size = new System.Drawing.Size(136, 20);
             this.carLabel.TabIndex = 6;
@@ -150,7 +154,7 @@
             // 
             // carTextBox
             // 
-            this.carTextBox.Location = new System.Drawing.Point(45, 190);
+            this.carTextBox.Location = new System.Drawing.Point(42, 301);
             this.carTextBox.Name = "carTextBox";
             this.carTextBox.Size = new System.Drawing.Size(220, 22);
             this.carTextBox.TabIndex = 5;
@@ -159,7 +163,7 @@
             // removeCarButton
             // 
             this.removeCarButton.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.removeCarButton.Location = new System.Drawing.Point(162, 240);
+            this.removeCarButton.Location = new System.Drawing.Point(162, 342);
             this.removeCarButton.Name = "removeCarButton";
             this.removeCarButton.Size = new System.Drawing.Size(103, 32);
             this.removeCarButton.TabIndex = 4;
@@ -170,7 +174,7 @@
             // addCarButton
             // 
             this.addCarButton.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.addCarButton.Location = new System.Drawing.Point(45, 240);
+            this.addCarButton.Location = new System.Drawing.Point(42, 342);
             this.addCarButton.Name = "addCarButton";
             this.addCarButton.Size = new System.Drawing.Size(103, 32);
             this.addCarButton.TabIndex = 3;
@@ -207,6 +211,29 @@
             this.loadBtn.UseVisualStyleBackColor = false;
             this.loadBtn.Click += new System.EventHandler(this.loadData);
             // 
+            // welcomeUserLabel
+            // 
+            this.welcomeUserLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.welcomeUserLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeUserLabel.Location = new System.Drawing.Point(53, 130);
+            this.welcomeUserLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.welcomeUserLabel.Name = "welcomeUserLabel";
+            this.welcomeUserLabel.Size = new System.Drawing.Size(207, 64);
+            this.welcomeUserLabel.TabIndex = 14;
+            this.welcomeUserLabel.Text = "user";
+            this.welcomeUserLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.welcomeUserLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Elephant", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(42, 92);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(223, 38);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "WELCOME!";
+            // 
             // ParkingLot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -239,5 +266,7 @@
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Label passwordLabel;
+        private System.Windows.Forms.Label welcomeUserLabel;
+        private System.Windows.Forms.Label label1;
     }
 }

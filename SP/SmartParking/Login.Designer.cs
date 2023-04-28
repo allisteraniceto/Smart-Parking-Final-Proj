@@ -43,7 +43,7 @@
             // usernameBox
             // 
             this.usernameBox.Location = new System.Drawing.Point(147, 219);
-            this.usernameBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usernameBox.Margin = new System.Windows.Forms.Padding(4);
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(244, 22);
             this.usernameBox.TabIndex = 0;
@@ -52,7 +52,7 @@
             // passwordBox
             // 
             this.passwordBox.Location = new System.Drawing.Point(147, 304);
-            this.passwordBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passwordBox.Margin = new System.Windows.Forms.Padding(4);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(244, 22);
             this.passwordBox.TabIndex = 1;
@@ -85,6 +85,7 @@
             this.label3.Size = new System.Drawing.Size(171, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Welcome to SmartParking";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // loginBtn
             // 
@@ -141,7 +142,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.usernameBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);

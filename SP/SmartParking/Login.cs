@@ -12,13 +12,16 @@ namespace SmartParking
         {
             InitializeComponent();
             Console.WriteLine($"{Environment.CurrentDirectory}"); //current working directory inside SmartParking\bin\Debug
-            path = Path.Combine(Environment.CurrentDirectory, "user.txt");
+            getWorkingDirectory();
         }
 
         private void getWorkingDirectory()
         {
             //currently at SmartParking\bin\Debug, go up 2 directories to get to SmartParking
             string currentDirectory = Environment.CurrentDirectory;
+            string parentDirectory = Directory.GetParent(currentDirectory)?.Parent?.FullName;
+            path = parentDirectory + "\\user.txt";
+            Console.WriteLine($"path changed to {path}");
         }
 
         private void getCredentials(Admin admin_user) //PATH: "C:\Users\allister18\OneDrive - Columbia Basin College\Documents\CPTS322\Smart-Parking-Final-Proj\SP\SmartParking\user.txt"
@@ -81,7 +84,7 @@ namespace SmartParking
             if (user.username == usernameBox.Text && user.password == passwordBox.Text)
             {
                 this.Hide();
-                ParkingLot engine = new ParkingLot();
+                ParkingLot engine = new ParkingLot(usernameBox.Text);
                 engine.ShowDialog();
                 this.Close();
 
@@ -100,6 +103,11 @@ namespace SmartParking
         }
 
         private void usernameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
